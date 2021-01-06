@@ -1,4 +1,8 @@
+let exercice3 ;
+
 $(document).ready(function() {
+  exercice3 = $('#exercice3') ;
+
   window.addEventListener('touchstart', touchEventHandler) ;
     window.addEventListener('touchend', touchEventHandler) ;
     window.addEventListener('touchcancel', touchEventHandler) ;
@@ -8,9 +12,9 @@ $(document).ready(function() {
   }) ;
 
   function touchEventHandler(event) {
-    var firstDiv = exercice3.find('div') ;
-    firstDiv.find('ul').empty() ;
-    firstDiv.find('ul').append(
+    var functionEx3 = exercice3.find('div') ;
+    functionEx3.find('ul').empty() ;
+    functionEx3.find('ul').append(
       "<li>Position X : " + event.changedTouches[0].screenX + "</li>",
       "<li>Position Y : " + event.changedTouches[0].screenY + "</li>",
       "<li>Type event : " + event.type + "</li>"
