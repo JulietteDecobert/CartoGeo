@@ -2,6 +2,7 @@ $(document).ready(function() {
   if (window.DeviceOrientationEvent) {
     window.addEventListener('deviceorientation', function(orientation) {
       console.log(orientation);
+      $('#function2').find('ul').empty();
       $('#function1').find('ul').append(
         '<li>alpha : ' + event.alpha + '</li>',
         "<li>beta : " + event.beta + "</li>",
@@ -22,10 +23,8 @@ $(document).ready(function() {
         ax = event.rotationRate.alpha;
         ay = event.rotationRate.beta;
         az = event.rotationRate.gamma;
-
+        $('#function2').find('ul').empty();
         $('#function2').find('ul').append(
-          $('#function2').find('ul').empty();
-
           '<li>rotation: ' + ("[" + rx + "," +ry +"," +rz + "]" +'</li>'),
           '<li>acceleration:' + ("[" + ax + "," +ay +"," +az + "]" + '</li>')
         );
