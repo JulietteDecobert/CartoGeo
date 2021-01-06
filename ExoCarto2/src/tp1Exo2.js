@@ -13,7 +13,6 @@ $(document).ready(function() {
   if (window.DeviceMotionEvent) {
       window.addEventListener('devicemotion', function(event) {
         console.log(event);
-        $('#function2').find('ul').empty();
         let rx,ry,rz;
         let ax,ay,az;
         rx = event.acceleration.x;
@@ -25,6 +24,8 @@ $(document).ready(function() {
         az = event.rotationRate.gamma;
 
         $('#function2').find('ul').append(
+          $('#function2').find('ul').empty();
+
           '<li>rotation: ' + ("[" + rx + "," +ry +"," +rz + "]" +'</li>'),
           '<li>acceleration:' + ("[" + ax + "," +ay +"," +az + "]" + '</li>')
         );
