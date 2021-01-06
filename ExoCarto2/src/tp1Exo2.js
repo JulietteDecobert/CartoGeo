@@ -13,20 +13,18 @@ $(document).ready(function() {
   if (window.DeviceMotionEvent) {
       window.addEventListener('devicemotion', function(event) {
         console.log(event);
+        let rx,ry,rz;
+        let ax,ay,az;
+        rx = event.acceleration.x;
+        ry = event.acceleration.y;
+        rz = event.acceleration.z;
+
+        ax = event.rotationRate.alpha;
+        ay = event.rotationRate.beta;
+        az = event.rotationRate.gamma;
         $('#function2').find('div').append(
-          let rx,ry,rz;
-          let ax,ay,az;
-
-          rx = event.acceleration.x;
-          ry = event.acceleration.y;
-          rz = event.acceleration.z;
-
-          ax = event.rotationRate.alpha;
-          ay = event.rotationRate.beta;
-          az = event.rotationRate.gamma;
-
-          '<li>rotation: ' + ("[" + rx + "," +ry +"," +rz + "]" +'</li>');
-          '<li>acceleration:' + ("[" + ax + "," +ay +"," +az + "]" + '</li>');
+          '<li>rotation: ' + ("[" + rx + "," +ry +"," +rz + "]" +'</li>'),
+          '<li>acceleration:' + ("[" + ax + "," +ay +"," +az + "]" + '</li>')
         );
       });
 
