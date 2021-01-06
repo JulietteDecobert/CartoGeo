@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="fr">
 <head>
-	<title>Exo1 Carto Geo</title>
+	<title>Exo2 Carto Geo</title>
     <link rel="icon" href="">
     <!-- META -->
     <meta charset="utf-8">
@@ -11,24 +11,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./src/tp1.js"></script>
 
 </head>
 
 <body>
-  <section id="exercice2">
-    <div id="function1">
-      <h2>Avec getCurrentPosition()</h2>
-      <ul>
-      </ul>
-    </div>
-    <div id="function2">
-      <h2>Avec watchPosition()</h2>
-      <ul>
-      </ul>
-    </div>
-  </section>
+    <h1>ExoCarto2</h1>
+    <p>alpha : <b id="alpha"></b>
+    <p>beta : <b id="beta"></b></p>
+    <p>gamma : <b id="gamma"></b></p>
 </body>
 
-<script></script>
+<script>
+  function handleOrientation(event) {
+      $("#alpha").text(event.alpha);
+      $("#beta").text(event.beta);
+      $("#gamma").text(event.gamma);
+}
+</script>
 </html>
