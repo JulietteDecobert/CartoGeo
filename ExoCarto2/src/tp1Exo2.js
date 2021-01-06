@@ -28,4 +28,5 @@ $(document).ready(function() {
           '<li>acceleration:' + ("[" + ax + "," +ay +"," +az + "]" + '</li>')
         );
       });
+    }
 }) ;
