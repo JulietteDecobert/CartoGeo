@@ -2,7 +2,7 @@ $(document).ready(function() {
   if (window.DeviceOrientationEvent) {
     window.addEventListener('deviceorientation', function(orientation) {
       console.log(orientation);
-      $('#function2').find('ul').empty();
+      $('#function1').find('ul').empty();
       $('#function1').find('ul').append(
         '<li>alpha : ' + event.alpha + '</li>',
         "<li>beta : " + event.beta + "</li>",
