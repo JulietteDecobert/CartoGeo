@@ -13,7 +13,7 @@ $(document).ready(function() {
   if (window.DeviceMotionEvent) {
       window.addEventListener('devicemotion', function(event) {
         console.log(event);
-        $('#function2').find('ul').append(
+        $('#function2').find('div').append(
           let rx,ry,rz;
           let ax,ay,az;
 
