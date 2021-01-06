@@ -22,10 +22,10 @@ $(document).ready(function() {
         ax = event.rotationRate.alpha;
         ay = event.rotationRate.beta;
         az = event.rotationRate.gamma;
+
         $('#function2').find('div').append(
           '<li>rotation: ' + ("[" + rx + "," +ry +"," +rz + "]" +'</li>'),
           '<li>acceleration:' + ("[" + ax + "," +ay +"," +az + "]" + '</li>')
         );
       });
-
 }) ;
