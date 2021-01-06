@@ -11,6 +11,6 @@ function touchEventHandler(event) {
   firstDiv.find('ul').empty() ;
   firstDiv.find('ul').append(
     "<li>Position X : " + event.changedTouches[0].screenX + "</li>",
-    "<li>Position X : " + event.changedTouches[0].screenY + "</li>",
+    "<li>Position Y : " + event.changedTouches[0].screenY + "</li>",
     "<li>Type event : " + event.type + "</li>"
   ) ;
