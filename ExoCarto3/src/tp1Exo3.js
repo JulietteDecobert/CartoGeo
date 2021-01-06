@@ -1,18 +1,16 @@
-$(document).ready(function() {
+window.addEventListener('touchstart', touchEventHandler) ;
+  window.addEventListener('touchend', touchEventHandler) ;
+  window.addEventListener('touchcancel', touchEventHandler) ;
+  window.addEventListener('touchleave', touchEventHandler) ;
+  window.addEventListener('touchmove', touchEventHandler) ;
 
-  document.addEventListener("touchstart", touche, false);
-  document.addEventListener("touchend", touche, false);
-  document.addEventListener("touchcancel", touche, false);
-  document.addEventListener("touchleave", touche, false);
-  document.addEventListener("touchmove", touche, false);
+}) ;
 
-  function touche(event) {
-    console.log(event);
-      $('#function1').find('ul').empty();
-      $('#function1').find('ul').append(
-        '<li>x : ' + event.changedTouches[0].pageX + '</li>',
-        "<li>y : " + event.changedTouches[0].pageY + "</li>",
-        "<li>type : " + event.type + "</li>"
-      ) ;
-  }
-}
+function touchEventHandler(event) {
+  var firstDiv = exercice3.find('div') ;
+  firstDiv.find('ul').empty() ;
+  firstDiv.find('ul').append(
+    "<li>Position X : " + event.changedTouches[0].screenX + "</li>",
+    "<li>Position X : " + event.changedTouches[0].screenY + "</li>",
+    "<li>Type event : " + event.type + "</li>"
+  ) ;
