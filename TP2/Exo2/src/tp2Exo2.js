@@ -2,28 +2,25 @@ $(document).ready(function() {
   initMap();
 }) ;
 
-// This example creates a simple polygon representing the Bermuda Triangle.
 function initMap() {
-  const triangleCoords = [
-    { lat: 25.774, lng: -80.19 },
-    { lat: 18.466, lng: -66.118 },
-    { lat: 32.321, lng: -64.757 },
-    { lat: 25.774, lng: -80.19 },
-  ];
+  // On initialise la carte
+  var carte = L.map('maCarte').setView([48.852969, 2.349903], 13);
 
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 5,
-    center: { lat: 24.886, lng: -70.268 },
-    mapTypeId: "terrain",
-  });
-  // Construct the polygon.
-  const bermudaTriangle = new google.maps.Polygon({
-    paths: triangleCoords,
-    strokeColor: "#FF0000",
-    strokeOpacity: 0.8,
-    strokeWeight: 2,
-    fillColor: "#FF0000",
-    fillOpacity: 0.35,
-    });
-    bermudaTriangle.setMap(map);
-  }
+  // On charge les "tuiles"
+  L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+      // Il est toujours bien de laisser le lien vers la source des données
+      attribution: 'données © <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
+      minZoom: 1,
+      maxZoom: 20
+  }).addTo(carte);
+
+  let triangle = L.polygon([
+      [48.85779, 2.3392724],
+      [48.852630, 2.3523187],
+      [48.86, 2.35223293],
+  ], {
+      color: 'green',
+      fillColor: 'green',
+      fillOpacity: 0.5
+  }).addTo(carte);
+}
