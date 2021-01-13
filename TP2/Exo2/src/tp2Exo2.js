@@ -15,12 +15,12 @@ function initMap() {
   }).addTo(carte);
 
   let triangle = L.polygon([
-      [48.85779, 2.3392724],
-      [48.852630, 2.3523187],
-      [48.86, 2.35223293],
+      [29.1222349, -80.991361],
+      [18.216919, -66.580912],
+      [32.320236, -64.7740215],
   ], {
-      color: 'green',
-      fillColor: 'green',
+      color: 'red',
+      fillColor: 'red',
       fillOpacity: 0.5
   }).addTo(carte);
 }
