@@ -1,6 +1,5 @@
 $(document).ready(function() {
-initMap();
-
+  initMap();
 }) ;
 
 // This example creates a simple polygon representing the Bermuda Triangle.
