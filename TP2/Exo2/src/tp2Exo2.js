@@ -10,6 +10,12 @@ function initMap() {
     { lat: 32.321, lng: -64.757 },
     { lat: 25.774, lng: -80.19 },
   ];
+
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 5,
+    center: { lat: 24.886, lng: -70.268 },
+    mapTypeId: "terrain",
+  });
   // Construct the polygon.
   const bermudaTriangle = new google.maps.Polygon({
     paths: triangleCoords,
@@ -21,8 +27,3 @@ function initMap() {
     });
     bermudaTriangle.setMap(map);
   }
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 5,
-    center: { lat: 24.886, lng: -70.268 },
-    mapTypeId: "terrain",
-  });
