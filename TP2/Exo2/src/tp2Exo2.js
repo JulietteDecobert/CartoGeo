@@ -1,10 +1,10 @@
 $(document).ready(function() {
     //Récupérer position
-    let posAc, acc;
+    let positionAc, acc;
     navigator.geolocation.getCurrentPosition(function(pos) {
-        let crd = pos.coords;
-        posAc = [crd.latitude, crd.longitude];
-        acc = crd.accuracy;
+        let coords = pos.coords;
+        positionAc = [coords.latitude, coords.longitude];
+        acc = coords.accuracy;
 
         //centre map sur nice
         var lat = 24.886;
@@ -20,7 +20,7 @@ $(document).ready(function() {
            maxZoom: 20,
            ext: 'png'
         }).addTo(carte);
-        
+
         const trico = [
             { lat: 29.122349, lng: -80.991361 },
             { lat: 18.216919, lng: -66.580912 },
@@ -29,14 +29,14 @@ $(document).ready(function() {
 
         var poly = L.polygon(trico).addTo(carte);
 
-        var circle = L.circle(posAc, {
-            color: 'red',
-            fillColor: '#f03',
-            fillOpacity: 0.5,
-            radius: acc
-        }).addTo(carte);
+        var circle = L.circle([coords.latitude, coords.longitude], {
+                  color: "red",
+                  fillColor: "#f03",
+                  fillOpacity: 0.5,
+                  radius: 50.0
+              }).addTo(carte);
 
-          let triangle = L.polygon([
+          var triangle = L.polygon([
               [29.1222349, -80.991361],
               [18.216919, -66.580912],
               [32.320236, -64.7740215],
@@ -46,8 +46,8 @@ $(document).ready(function() {
               fillOpacity: 0.5
           }).addTo(carte);
 
-        let latLngAc = L.latLng(crd.latitude, crd.longitude);
-        let distanceuh = latLngAc.distanceTo(L.latLng(43.2969500, 5.3810700));
-        $("#distance").text(distanceuh);
+        let latLongAcc = L.latLng(coords.latitude, coords.longitude);
+        let laDistance = latLongAcc.distanceTo(L.latLng(43.2969500, 5.3810700));
+        $("#distance").text(laDistance);
     });
 });
