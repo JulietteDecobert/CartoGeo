@@ -9,8 +9,10 @@ $(document).ready(function() {
       "<li>Timestamp : " + position.timestamp + "</li>"
     ) ;
   });
-}) ;
+  
+  initMap();
 
+}) ;
 
 // On initialise la latitude et la longitude de Nice (centre de la carte)
 var lat = 43.700000;
@@ -26,9 +28,5 @@ function initMap() {
         attribution: 'données © <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
         minZoom: 1,
         maxZoom: 20
-    }).addTo(macarte);
-}
-window.onload = function(){
-// Fonction d'initialisation qui s'exécute lorsque le DOM est chargé
-initMap();
-};
+      }).addTo(macarte);
+    }
