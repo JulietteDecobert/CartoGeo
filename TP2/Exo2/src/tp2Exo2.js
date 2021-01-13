@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 function initMap() {
   // On initialise la carte
-  var carte = L.map('maCarte').setView([29.1222349,-80.991361], 5);
+  var carte = L.map('maCarte').setView([29.1222349,-80.991361], 1);
 
   // On charge les "tuiles"
   L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
