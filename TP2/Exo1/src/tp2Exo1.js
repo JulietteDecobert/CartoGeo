@@ -9,7 +9,7 @@ $(document).ready(function() {
       "<li>Timestamp : " + position.timestamp + "</li>"
     ) ;
   });
-  
+
   initMap();
 
 }) ;
@@ -29,4 +29,6 @@ function initMap() {
         minZoom: 1,
         maxZoom: 20
       }).addTo(macarte);
+      // Nous ajoutons un marqueur
+      var marker = L.marker([lat, lon]).addTo(macarte);
     }
