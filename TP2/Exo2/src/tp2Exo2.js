@@ -19,7 +19,7 @@ function initMap() {
         minZoom: 0,
         maxZoom: 20,
         ext: 'png'
-  }).addTo(zeMap);
+  }).addTo(carte);
 
 
   let triangle = L.polygon([
