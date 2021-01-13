@@ -2,7 +2,7 @@
     // Exercice 3
     $.ajax({
       type: "GET",
-      url: "./Geojson/ev-equipement-opendata-2020.geojson",
+      url: "../../Geojson/ev-equipement-opendata-2020.geojson",
       success: function(data) {
         var mapJardin = L.map('maCarte').setView([43.7013, 7.2681], 10);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
