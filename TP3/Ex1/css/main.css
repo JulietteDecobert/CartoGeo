@@ -1,0 +1,17 @@
+#porte {
+  fill:#7100FF;
+}
+#porte:hover {
+  fill: #0500FF ;
+}
+.day {
+  fill:#0CC1F3;
+}
+.night {
+  fill: #191970;
+  /*le gris: #D8D8D8 mais le bleu nuit pour la nuit c'est plus vrai <3*/
+}
+body {
+  text-align: center;
+  margin: 0;
+}
