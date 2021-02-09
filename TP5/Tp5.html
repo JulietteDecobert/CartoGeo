@@ -5,7 +5,11 @@
   <title>TP4 ex2</title>
   <link rel="stylesheet" href="./css/main.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://threejs.org/build/three.js"></script>
+  <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://threejs.org//examples/js/loaders/GLTFLoader.js"></script>
   <script src=./src/canvas.js></script>
+  <script src=./src/threeJs.js></script>
   <script src=./src/svg.js></script>
 </head>
 <body>
@@ -16,11 +20,19 @@
     </div>
   </section>
   <section>
-    <h2><SVG/h2>
+    <h2>SVG</h2>
       <div class="svg">
         <img src="./image/arrow.svg" id="needleSvg" />
       </div>
   </section>
+
+  <section>
+    <h2>ThreeJS</h2>
+    <div>
+      <canvas id="canvasthreeJSCompass" ></canvas>
+    </div>
+  </section>
+
 
 </body>
 </html>
